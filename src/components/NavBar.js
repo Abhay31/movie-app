@@ -11,16 +11,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-600 text-white fixed w-full top-0 shadow-lg">
+    <nav className="bg-blue-600 text-white fixed w-full top-0 shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <span onClick={()=> navigate('/')} className="cursor-pointer font-bold text-xl">Movies App</span>
+            <span onClick={()=> navigate('/')} className="cursor-pointer font-bold text-3xl">Movies App</span>
           </div>
           <div className="flex items-center">
             <button
               onClick={handleNavigate}
-              className="relative bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded"
+              className="relative bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-full"
             >
               Favorites
               {favoritesCount > 0 && (

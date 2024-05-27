@@ -8,7 +8,10 @@ const initialState = {
   error: null,
 };
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 export const fetchMovies = createAsyncThunk('movies/fetchMovies', async () => {
+  await delay(1000);
   const response = await axios.get(process.env.REACT_APP_MOVIES_API_URL);
   return response.data.sort((a, b) => b.rating - a.rating);
 });
